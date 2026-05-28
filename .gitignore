@@ -55,3 +55,7 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+/.vs/Orleans.MultiClusterClient/CopilotIndices/18.6.39603.9996
+/.vs/Orleans.MultiClusterClient.slnx/FileContentIndex
+/.vs
+src/.vs/
