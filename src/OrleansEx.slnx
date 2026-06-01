@@ -1,3 +1,9 @@
 <Solution>
-  <Project Path="Orleans.MultiClusterClient/Orleans.MultiClusterClient.csproj" />
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="Orleans.MultiClusterClient/Orleans.MultiClusterClient.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
 </Solution>

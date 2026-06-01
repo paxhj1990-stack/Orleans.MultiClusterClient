@@ -1,12 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+    <Platforms>AnyCPU;x64</Platforms>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <Title>Orleans.MultiClusterClient</Title>
+    <VersionPrefix>1.0.1</VersionPrefix>
+    <Authors>oho</Authors>
+    <Description>configuring and building multiple Orleans clients for connecting to multiple clusters.</Description>
+    <RepositoryUrl>https://github.com/paxhj1990-stack/Orleans.MultiClusterClient</RepositoryUrl>
+    <PackageTags>orleans;multi cluster</PackageTags>
+    <PackageOutputPath>bin\package</PackageOutputPath>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <!--<ItemGroup>
+    <None Include="bin\native\win-x64\**\*.*"
+          Pack="true"
+          PackagePath="runtime/win-x64/native/"/>
+    <None Include="bin\native\win-Release\**\*.*"
+        Pack="true"
+        PackagePath="runtime/win-x64/native/"/>
+  </ItemGroup>-->
+  
   <ItemGroup>
     <PackageReference Include="Microsoft.Orleans.Core" Version="10.1.0" />
   </ItemGroup>
