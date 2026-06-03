@@ -1,3 +1,6 @@
+```ps1
+Install-Package Orleans.MultiClusterClient
+```
 ```csharp
 using Microsoft.Extensions.Hosting;
 using Orleans.Configuration;
