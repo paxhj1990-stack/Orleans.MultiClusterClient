@@ -83,9 +83,9 @@ internal sealed class LocalGrain(IMultiClusterClient multiClusterClient) : Grain
 {
     public async ValueTask<String> GetName()
     {
-        var r1v = await multiClusterClient.GetGrain<IRemote2Grain>("remoteClusterName1", "grainKey1")
+        var r1v = await multiClusterClient.GetGrain<IRemote2Grain>("Remote2", "grainKey1")
             .Get();
-        var r2v = await multiClusterClient.GetGrain<IRemote1Grain>("remoteClusterName2", "grainKey2")
+        var r2v = await multiClusterClient.GetGrain<IRemote1Grain>("Remote1", "grainKey2")
             .Get(r1v);
         return $"{r1v}/{r2v}";
     }
