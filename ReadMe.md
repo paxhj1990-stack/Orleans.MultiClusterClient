@@ -76,6 +76,7 @@ internal sealed class LocalGrain([FromKeyedServices("Remote2")] IClusterClient r
 }
 ```
 2.Use the IMultiClusterClient to dynamically select the cluster client at runtime:
+
 Ignore the case sensitivity of the name, as it is only used for lookup.
 ```csharp
 internal sealed class LocalGrain(IMultiClusterClient multiClusterClient) : Grain, ILocalGrain
