@@ -56,6 +56,27 @@ Console.ReadKey();
 await app.StopAsync();
 
 ```
+# How to use
+
+1.Use Keyed Services to inject multiple cluster clients into your grain:
+
+Note the case sensitivity of the name.
+```csharp
+internal sealed class LocalGrain([FromKeyedServices("Remote2")] IClusterClient remote2ClusterClient,
+    [FromKeyedServices("Remote1")] IClusterClient remote1ClusterClient) : Grain, ILocalGrain
+{
+    public async ValueTask<String> GetName()
+    {
+        var r1v = await remote2ClusterClient.GetGrain<IRemote2Grain>(1)
+            .SelectMultipleRandom();
+        var r2v = await remote1ClusterClient.GetGrain<IRemote1Grain>("set1")
+            .Select(r1v);
+        return $"{r1v}/{r2v}";
+    }
+}
+```
+2.Use the IMultiClusterClient to dynamically select the cluster client at runtime:
+Ignore the case sensitivity of the name, as it is only used for lookup.
 ```csharp
 internal sealed class LocalGrain(IMultiClusterClient multiClusterClient) : Grain, ILocalGrain
 {
