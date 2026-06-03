@@ -10,7 +10,7 @@
 
   <PropertyGroup>
     <Title>Orleans.MultiClusterClient</Title>
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionPrefix>1.1.0</VersionPrefix>
     <Authors>oho</Authors>
     <Description>configuring and building multiple Orleans clients for connecting to multiple clusters.</Description>
     <RepositoryUrl>https://github.com/paxhj1990-stack/Orleans.MultiClusterClient</RepositoryUrl>
