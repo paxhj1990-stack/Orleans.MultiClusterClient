@@ -68,9 +68,9 @@ internal sealed class LocalGrain([FromKeyedServices("Remote2")] IClusterClient r
     public async ValueTask<String> GetName()
     {
         var r1v = await remote2ClusterClient.GetGrain<IRemote2Grain>(1)
-            .SelectMultipleRandom();
+            .Get();
         var r2v = await remote1ClusterClient.GetGrain<IRemote1Grain>("set1")
-            .Select(r1v);
+            .Get(r1v);
         return $"{r1v}/{r2v}";
     }
 }
