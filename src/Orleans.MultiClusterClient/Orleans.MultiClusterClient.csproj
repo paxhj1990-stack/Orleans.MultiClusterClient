@@ -17,7 +17,15 @@
     <PackageTags>orleans;multi cluster</PackageTags>
     <PackageOutputPath>bin\package</PackageOutputPath>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageReadmeFile>ReadMe.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\ReadMe.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <!--<ItemGroup>
     <None Include="bin\native\win-x64\**\*.*"
