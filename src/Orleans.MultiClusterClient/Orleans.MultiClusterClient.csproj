@@ -10,7 +10,7 @@
 
   <PropertyGroup>
     <Title>Orleans.MultiClusterClient</Title>
-    <VersionPrefix>1.1.1</VersionPrefix>
+    <VersionPrefix>1.1.2</VersionPrefix>
     <Authors>oho</Authors>
     <Description>configuring and building multiple Orleans clients for connecting to multiple clusters.</Description>
     <RepositoryUrl>https://github.com/paxhj1990-stack/Orleans.MultiClusterClient</RepositoryUrl>
@@ -27,17 +27,8 @@
     </None>
   </ItemGroup>
 
-  <!--<ItemGroup>
-    <None Include="bin\native\win-x64\**\*.*"
-          Pack="true"
-          PackagePath="runtime/win-x64/native/"/>
-    <None Include="bin\native\win-Release\**\*.*"
-        Pack="true"
-        PackagePath="runtime/win-x64/native/"/>
-  </ItemGroup>-->
-  
   <ItemGroup>
-    <PackageReference Include="Microsoft.Orleans.Core" Version="10.2.0" />
+    <PackageReference Include="Microsoft.Orleans.Core" Version="10.2.2" />
   </ItemGroup>
 
 </Project>
